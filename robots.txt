@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Sitemaps (uncomment and replace when domain is mapped)
+# Sitemap: https://muneebworks.com/sitemap.xml
