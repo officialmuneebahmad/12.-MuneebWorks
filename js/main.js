@@ -213,4 +213,48 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   }
+
+  // Work Case Studies Category Filter
+  const filterTabs = document.querySelectorAll('.work-tab');
+  const workCards = document.querySelectorAll('.work-grid .work-card');
+
+  if (filterTabs.length > 0 && workCards.length > 0) {
+    const filterWork = (category) => {
+      workCards.forEach(card => {
+        const cardCategory = card.getAttribute('data-category');
+        
+        card.classList.add('fade-out');
+        
+        setTimeout(() => {
+          if (category === 'all' || cardCategory === category) {
+            card.classList.remove('hidden');
+            requestAnimationFrame(() => {
+              card.classList.remove('fade-out');
+            });
+          } else {
+            card.classList.add('hidden');
+          }
+        }, 200);
+      });
+    };
+
+    filterTabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        filterTabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+
+        const category = tab.getAttribute('data-filter');
+        filterWork(category);
+      });
+    });
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const categoryParam = urlParams.get('category');
+    if (categoryParam) {
+      const activeTab = document.querySelector(`.work-tab[data-filter="${categoryParam}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  }
 });

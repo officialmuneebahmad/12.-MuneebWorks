@@ -22,7 +22,7 @@
   <!-- CSS Link -->
   <link rel="stylesheet" href="css/styles.css">
   <!-- Favicon -->
-  <link rel="icon" type="image/jpeg" href="logo.jpg">
+  <link rel="icon" type="image/png" href="favicon.png">
   <!-- Google Material Icons -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
@@ -40,6 +40,7 @@
         <a href="#services" class="nav-link">Services</a>
         <a href="#pricing" class="nav-link">Pricing</a>
         <a href="#hourly" class="nav-link">Hourly</a>
+        <a href="work.html" class="nav-link">Work</a>
         <a href="#process" class="nav-link">Process</a>
         <a href="#faq" class="nav-link">FAQ</a>
         <a href="#contact" class="nav-link">Contact</a>
@@ -76,6 +77,7 @@
     <a href="#services" class="nav-link">Services</a>
     <a href="#pricing" class="nav-link">Pricing</a>
     <a href="#hourly" class="nav-link">Hourly</a>
+    <a href="work.html" class="nav-link">Work</a>
     <a href="#process" class="nav-link">Process</a>
     <a href="#faq" class="nav-link">FAQ</a>
     <a href="#contact" class="nav-link">Contact</a>
@@ -228,7 +230,7 @@
             <input type="checkbox" id="currency-toggle" aria-label="Toggle between USD and PKR pricing">
             <span class="slider"></span>
           </label>
-          <span class="toggle-label" id="label-pkr">🇵🇰 Pakistan (PKR)</span>
+          <span class="toggle-label" id="label-pkr"><svg class="pk-flag" viewBox="0 0 640 480" xmlns="http://www.w3.org/2000/svg"><g fill-rule="evenodd" stroke-width="1pt" transform="translate(49) scale(.9375)"><path fill="#0c590b" d="M-95 0h768v512H-95z"/><path fill="#fff" d="M-95 0H97.5v512H-95z"/><g fill="#fff"><path d="m403.7 225.4-31.2-6.6-16.4 27.3-3.4-31.6-31-7.2 29-13-2.7-31.7 21.4 23.6 29.3-12.4-15.9 27.6 21 24z"/><path d="M415.4 306a121 121 0 0 1-161.3 59.4 122 122 0 0 1-59.5-162.1A119 119 0 0 1 266 139a156 156 0 0 0-11.8 10.9A112.3 112.3 0 0 0 415.5 306z"/></g></g></svg> Pakistan (PKR)</span>
         </div>
 
         <!-- USD Panels -->
@@ -567,7 +569,7 @@
           </div>
 
           <div class="hourly-column">
-            <h3 class="hourly-column-title">🇵🇰 Pakistan Rates</h3>
+            <h3 class="hourly-column-title"><svg class="pk-flag" viewBox="0 0 640 480" xmlns="http://www.w3.org/2000/svg"><g fill-rule="evenodd" stroke-width="1pt" transform="translate(49) scale(.9375)"><path fill="#0c590b" d="M-95 0h768v512H-95z"/><path fill="#fff" d="M-95 0H97.5v512H-95z"/><g fill="#fff"><path d="m403.7 225.4-31.2-6.6-16.4 27.3-3.4-31.6-31-7.2 29-13-2.7-31.7 21.4 23.6 29.3-12.4-15.9 27.6 21 24z"/><path d="M415.4 306a121 121 0 0 1-161.3 59.4 122 122 0 0 1-59.5-162.1A119 119 0 0 1 266 139a156 156 0 0 0-11.8 10.9A112.3 112.3 0 0 0 415.5 306z"/></g></g></svg>Pakistan Rates</h3>
             <div class="hourly-list">
               <div class="hourly-row">
                 <span class="hourly-service">Social Ads Design</span>
@@ -685,6 +687,105 @@
       </div>
     </section>
 
+    <!-- Work Preview Section -->
+    <section id="work-preview" class="section">
+      <div class="container">
+        <div class="section-header" style="text-align: center; margin-bottom: var(--space-xl);">
+          <span class="section-label">Case Studies</span>
+          <h2>Featured Work Showcase</h2>
+          <p>Explore some of our recent, high-performance web development and creative projects.</p>
+        </div>
+
+        <div class="work-grid">
+          <!-- Card 1: TCS -->
+          <a href="work.html?category=web" class="work-card">
+            <div class="device-mockup browser-frame">
+              <div class="browser-chrome">
+                <div class="browser-dots">
+                  <div class="browser-dot"></div>
+                  <div class="browser-dot"></div>
+                  <div class="browser-dot"></div>
+                </div>
+                <div class="browser-address">multantech.store</div>
+              </div>
+              <div class="browser-content">
+                <img src="img/tcs.png" alt="TCS Storefront Mockup">
+              </div>
+            </div>
+            <div class="work-card-content">
+              <div class="work-card-name">TCS</div>
+              <div class="work-card-result">High-converting WhatsApp-integrated storefront.</div>
+              <div class="work-card-stack">
+                <span class="work-card-tag">HTML</span>
+                <span class="work-card-tag">CSS</span>
+                <span class="work-card-tag">JS</span>
+                <span class="work-card-tag">WhatsApp Sales</span>
+              </div>
+              <p class="work-card-desc">A clean and fast e-commerce platform built for a local technology retail store. Features dynamic product filtering, a fully functional shopping cart, and one-click checkout routing order details straight to WhatsApp for frictionless sales closure.</p>
+              <div class="work-card-action">View details <span>&rarr;</span></div>
+            </div>
+          </a>
+
+          <!-- Card 2: POS System -->
+          <a href="work.html?category=web" class="work-card">
+            <div class="phone-frame-wrapper">
+              <div class="phone-frame">
+                <div class="phone-notch"></div>
+                <div class="phone-content">
+                  <img src="img/pos.png" alt="POS System Mockup">
+                </div>
+              </div>
+            </div>
+            <div class="work-card-content">
+              <div class="work-card-name">POS System</div>
+              <div class="work-card-result">Lightweight, secure offline-first retail checkout.</div>
+              <div class="work-card-stack">
+                <span class="work-card-tag">HTML</span>
+                <span class="work-card-tag">CSS</span>
+                <span class="work-card-tag">JS</span>
+                <span class="work-card-tag">Payments</span>
+              </div>
+              <p class="work-card-desc">A high-performance point-of-sale dashboard optimized for retail operations. Supports real-time inventory tracking, local transaction storage, and secure stripe invoice processing for global payment collection.</p>
+              <div class="work-card-action">View details <span>&rarr;</span></div>
+            </div>
+          </a>
+
+          <!-- Card 3: Ovrion -->
+          <a href="work.html?category=web" class="work-card">
+            <div class="device-mockup browser-frame">
+              <div class="browser-chrome">
+                <div class="browser-dots">
+                  <div class="browser-dot"></div>
+                  <div class="browser-dot"></div>
+                  <div class="browser-dot"></div>
+                </div>
+                <div class="browser-address">ovrion.xyz</div>
+              </div>
+              <div class="browser-content">
+                <img src="img/ovrion.png" alt="Ovrion Storefront Mockup">
+              </div>
+            </div>
+            <div class="work-card-content">
+              <div class="work-card-name">Ovrion</div>
+              <div class="work-card-result">Premium digital asset store for creators.</div>
+              <div class="work-card-stack">
+                <span class="work-card-tag">HTML</span>
+                <span class="work-card-tag">Tailwind</span>
+                <span class="work-card-tag">JS</span>
+                <span class="work-card-tag">Stripe</span>
+              </div>
+              <p class="work-card-desc">A highly optimized showcase and marketplace for digital assets. Integrated with a secure billing pipeline to offer seamless global delivery of templates, assets, and design files directly post-purchase.</p>
+              <div class="work-card-action">View details <span>&rarr;</span></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="work-preview-footer">
+          <a href="work.html" class="btn btn-primary">View all work &rarr;</a>
+        </div>
+      </div>
+    </section>
+
     <!-- Process Section -->
     <section id="process" class="section">
       <div class="container">
@@ -757,7 +858,7 @@
           </div>
 
           <div class="split-card split-card-dark">
-            <h3>🇵🇰 Pakistan Channels</h3>
+            <h3><svg class="pk-flag" viewBox="0 0 640 480" xmlns="http://www.w3.org/2000/svg"><g fill-rule="evenodd" stroke-width="1pt" transform="translate(49) scale(.9375)"><path fill="#0c590b" d="M-95 0h768v512H-95z"/><path fill="#fff" d="M-95 0H97.5v512H-95z"/><g fill="#fff"><path d="m403.7 225.4-31.2-6.6-16.4 27.3-3.4-31.6-31-7.2 29-13-2.7-31.7 21.4 23.6 29.3-12.4-15.9 27.6 21 24z"/><path d="M415.4 306a121 121 0 0 1-161.3 59.4 122 122 0 0 1-59.5-162.1A119 119 0 0 1 266 139a156 156 0 0 0-11.8 10.9A112.3 112.3 0 0 0 415.5 306z"/></g></g></svg>Pakistan Channels</h3>
             <ul class="gateway-list">
               <li><svg viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none">
                   <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
@@ -1055,13 +1156,14 @@
           <a href="#services">Services</a>
           <a href="#pricing">Pricing</a>
           <a href="#hourly">Hourly</a>
+          <a href="work.html">Work</a>
           <a href="#process">Process</a>
           <a href="#faq">FAQ</a>
         </div>
       </div>
       <div class="footer-bottom">
         <span>&copy; 2026 Muneeb Works. All rights reserved.</span>
-        <span>Serving international & 🇵🇰 Pakistan markets.</span>
+        <span>Serving international & <svg class="pk-flag" viewBox="0 0 640 480" xmlns="http://www.w3.org/2000/svg"><g fill-rule="evenodd" stroke-width="1pt" transform="translate(49) scale(.9375)"><path fill="#0c590b" d="M-95 0h768v512H-95z"/><path fill="#fff" d="M-95 0H97.5v512H-95z"/><g fill="#fff"><path d="m403.7 225.4-31.2-6.6-16.4 27.3-3.4-31.6-31-7.2 29-13-2.7-31.7 21.4 23.6 29.3-12.4-15.9 27.6 21 24z"/><path d="M415.4 306a121 121 0 0 1-161.3 59.4 122 122 0 0 1-59.5-162.1A119 119 0 0 1 266 139a156 156 0 0 0-11.8 10.9A112.3 112.3 0 0 0 415.5 306z"/></g></g></svg> Pakistan markets.</span>
       </div>
     </div>
   </footer>
