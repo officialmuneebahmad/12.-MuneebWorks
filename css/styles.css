@@ -1029,6 +1029,16 @@ input:checked+.slider:before {
   box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
 }
 
+.graph-dot {
+  transition: r var(--transition-fast), fill var(--transition-fast), stroke var(--transition-fast);
+}
+
+.graph-dot:hover {
+  r: 6.5px !important;
+  fill: var(--primary-accent) !important;
+  stroke: var(--white) !important;
+}
+
 .score-title {
   color: var(--white);
   font-size: 1.25rem;

@@ -25,6 +25,8 @@
   <link rel="icon" type="image/png" href="favicon.png">
   <!-- Google Material Icons -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
@@ -692,6 +694,18 @@
             </div>
             <div class="metric-bar-bg">
               <div class="metric-bar-fill" data-value="95"></div>
+            </div>
+          </div>
+
+          <!-- Interactive Curve Line Graph (Chart.js) -->
+          <div class="standards-graph-container" style="margin-top: var(--space-md); border-top: 1px solid rgba(255,255,255,0.05); padding-top: var(--space-md); position: relative;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+              <span style="font-size: 0.85rem; font-weight: 600; color: var(--white); letter-spacing: 0.02em;">Speed Optimization Curve</span>
+              <span style="font-size: 0.75rem; color: var(--text-muted);">Hover points to inspect</span>
+            </div>
+            
+            <div class="graph-wrapper" style="position: relative; height: 130px; width: 100%;">
+              <canvas id="standards-chart"></canvas>
             </div>
           </div>
         </div>
