@@ -37,22 +37,27 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Pricing Toggle (USD / PKR)
-  const currencyToggle = document.getElementById('currency-toggle');
-  const usdPanel = document.getElementById('usd-pricing');
-  const pkrPanel = document.getElementById('pkr-pricing');
+  // Pricing Toggles (Ads & Web Toggles independently)
+  const setupPricingToggle = (toggleId, usdPanelId, pkrPanelId) => {
+    const toggle = document.getElementById(toggleId);
+    const usdPanel = document.getElementById(usdPanelId);
+    const pkrPanel = document.getElementById(pkrPanelId);
 
-  if (currencyToggle && usdPanel && pkrPanel) {
-    currencyToggle.addEventListener('change', () => {
-      if (currencyToggle.checked) {
-        usdPanel.classList.remove('active');
-        pkrPanel.classList.add('active');
-      } else {
-        pkrPanel.classList.remove('active');
-        usdPanel.classList.add('active');
-      }
-    });
-  }
+    if (toggle && usdPanel && pkrPanel) {
+      toggle.addEventListener('change', () => {
+        if (toggle.checked) {
+          usdPanel.classList.remove('active');
+          pkrPanel.classList.add('active');
+        } else {
+          pkrPanel.classList.remove('active');
+          usdPanel.classList.add('active');
+        }
+      });
+    }
+  };
+
+  setupPricingToggle('ads-currency-toggle', 'ads-usd-pricing', 'ads-pkr-pricing');
+  setupPricingToggle('web-currency-toggle', 'web-usd-pricing', 'web-pkr-pricing');
 
   // FAQ Accordion
   const faqItems = document.querySelectorAll('.faq-item');

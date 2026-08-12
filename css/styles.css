@@ -714,12 +714,31 @@ p {
 }
 
 /* Pricing Section */
+.pricing-group-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-md);
+  border-bottom: 1px solid var(--border-light);
+  padding-bottom: var(--space-sm);
+  margin-top: var(--space-lg);
+}
+
+body.dark-mode .pricing-group-header {
+  border-bottom-color: var(--border-dark);
+}
+
+.pricing-group-title {
+  margin-bottom: 0 !important;
+}
+
 .pricing-toggle-container {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: var(--space-sm);
-  margin-bottom: var(--space-xl);
 }
 
 .toggle-label {
@@ -1739,6 +1758,12 @@ body.dark-mode .work-tabs {
     width: 100%;
     text-align: center;
     border-radius: var(--radius-md);
+  }
+
+  .pricing-group-header {
+    flex-direction: column;
+    text-align: center;
+    gap: var(--space-xs);
   }
 
   .footer-top {

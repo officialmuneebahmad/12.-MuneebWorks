@@ -224,25 +224,27 @@
             optimized AI engineering.</p>
         </div>
 
-        <div class="pricing-toggle-container">
-          <span class="toggle-label" id="label-usd">🌐 International (USD)</span>
-          <label class="toggle-switch">
-            <input type="checkbox" id="currency-toggle" aria-label="Toggle between USD and PKR pricing">
-            <span class="slider"></span>
-          </label>
-          <span class="toggle-label" id="label-pkr"><svg class="pk-flag" viewBox="0 0 640 480" xmlns="http://www.w3.org/2000/svg"><g fill-rule="evenodd" stroke-width="1pt" transform="translate(49) scale(.9375)"><path fill="#0c590b" d="M-95 0h768v512H-95z"/><path fill="#fff" d="M-95 0H97.5v512H-95z"/><g fill="#fff"><path d="m403.7 225.4-31.2-6.6-16.4 27.3-3.4-31.6-31-7.2 29-13-2.7-31.7 21.4 23.6 29.3-12.4-15.9 27.6 21 24z"/><path d="M415.4 306a121 121 0 0 1-161.3 59.4 122 122 0 0 1-59.5-162.1A119 119 0 0 1 266 139a156 156 0 0 0-11.8 10.9A112.3 112.3 0 0 0 415.5 306z"/></g></g></svg> Pakistan (PKR)</span>
-        </div>
+        <!-- Social Media & Ad Packages Group -->
+        <div class="pricing-section-group" style="margin-bottom: var(--space-xl);">
+          <div class="pricing-group-header">
+            <h3 class="pricing-group-title">Social Media & Ad Packages</h3>
+            <div class="pricing-toggle-container">
+              <span class="toggle-label">🌐 USD</span>
+              <label class="toggle-switch">
+                <input type="checkbox" id="ads-currency-toggle" aria-label="Toggle between USD and PKR pricing for ads">
+                <span class="slider"></span>
+              </label>
+              <span class="toggle-label"><svg class="pk-flag" viewBox="0 0 640 480" xmlns="http://www.w3.org/2000/svg"><g fill-rule="evenodd" stroke-width="1pt" transform="translate(49) scale(.9375)"><path fill="#0c590b" d="M-95 0h768v512H-95z"/><path fill="#fff" d="M-95 0H97.5v512H-95z"/><g fill="#fff"><path d="m403.7 225.4-31.2-6.6-16.4 27.3-3.4-31.6-31-7.2 29-13-2.7-31.7 21.4 23.6 29.3-12.4-15.9 27.6 21 24z"/><path d="M415.4 306a121 121 0 0 1-161.3 59.4 122 122 0 0 1-59.5-162.1A119 119 0 0 1 266 139a156 156 0 0 0-11.8 10.9A112.3 112.3 0 0 0 415.5 306z"/></g></g></svg> PKR</span>
+            </div>
+          </div>
 
-        <!-- USD Panels -->
-        <div id="usd-pricing" class="pricing-panel active">
-          <!-- USD Ads -->
-          <div class="pricing-section-group">
-            <h3 class="pricing-group-title">Social Media & Ad Packages (USD)</h3>
+          <!-- USD Ads Cards -->
+          <div id="ads-usd-pricing" class="pricing-panel active">
             <div class="pricing-grid-3">
               <div class="pricing-card">
                 <div class="tier-name">Ad Starter</div>
                 <div class="tier-scope">Single campaign launch</div>
-                <div class="price-range">$300 - $500</div>
+                <div class="price-range">$150 - $300</div>
                 <div class="price-period">per project</div>
                 <ul class="pricing-features">
                   <li><svg viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none">
@@ -265,7 +267,7 @@
                 <div class="popular-badge">Best Value</div>
                 <div class="tier-name">Ad Growth</div>
                 <div class="tier-scope">Complete brand feed</div>
-                <div class="price-range">$600 - $1,000</div>
+                <div class="price-range">$400 - $600</div>
                 <div class="price-period">per project</div>
                 <ul class="pricing-features">
                   <li><svg viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none">
@@ -287,7 +289,7 @@
               <div class="pricing-card">
                 <div class="tier-name">Ad Enterprise</div>
                 <div class="tier-scope">Full studio retainer</div>
-                <div class="price-range">$1,500 - $2,500</div>
+                <div class="price-range">$800 - $1,200</div>
                 <div class="price-period">per month</div>
                 <ul class="pricing-features">
                   <li><svg viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none">
@@ -308,14 +310,100 @@
             </div>
           </div>
 
-          <!-- USD Web (Apply 20% discount: $400-800 becomes $320-640; $1200-2500 becomes $960-2000; $3000-6000 becomes $2400-4800) -->
-          <div class="pricing-section-group">
-            <h3 class="pricing-group-title">Website Development Packages (USD)</h3>
+          <!-- PKR Ads Cards -->
+          <div id="ads-pkr-pricing" class="pricing-panel">
+            <div class="pricing-grid-3">
+              <div class="pricing-card">
+                <div class="tier-name">Ad Starter</div>
+                <div class="tier-scope">Single campaign launch</div>
+                <div class="price-range">5k - 15k PKR</div>
+                <div class="price-period">per project</div>
+                <ul class="pricing-features">
+                  <li><svg viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none">
+                      <path d="M20 6L9 17l-5-5"></path>
+                    </svg>3 bespoke static designs</li>
+                  <li><svg viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none">
+                      <path d="M20 6L9 17l-5-5"></path>
+                    </svg>1 revision round</li>
+                  <li><svg viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none">
+                      <path d="M20 6L9 17l-5-5"></path>
+                    </svg>48-hour delivery</li>
+                  <li><svg viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none">
+                      <path d="M20 6L9 17l-5-5"></path>
+                    </svg>Source Figma layout</li>
+                </ul>
+                <a href="#contact" class="btn btn-secondary">Book Starter Ads</a>
+              </div>
+
+              <div class="pricing-card popular">
+                <div class="popular-badge">Best Value</div>
+                <div class="tier-name">Ad Growth</div>
+                <div class="tier-scope">Complete brand feed</div>
+                <div class="price-range">30k - 50k PKR</div>
+                <div class="price-period">per project</div>
+                <ul class="pricing-features">
+                  <li><svg viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none">
+                      <path d="M20 6L9 17l-5-5"></path>
+                    </svg>8 high-performance designs</li>
+                  <li><svg viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none">
+                      <path d="M20 6L9 17l-5-5"></path>
+                    </svg>Infinite layout tweaks</li>
+                  <li><svg viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none">
+                      <path d="M20 6L9 17l-5-5"></path>
+                    </svg>Ready-to-post copies</li>
+                  <li><svg viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none">
+                      <path d="M20 6L9 17l-5-5"></path>
+                    </svg>A/B test variations</li>
+                </ul>
+                <a href="#contact" class="btn btn-primary">Book Growth Ads</a>
+              </div>
+
+              <div class="pricing-card">
+                <div class="tier-name">Ad Enterprise</div>
+                <div class="tier-scope">Full studio retainer</div>
+                <div class="price-range">50k - 100k PKR</div>
+                <div class="price-period">per month</div>
+                <ul class="pricing-features">
+                  <li><svg viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none">
+                      <path d="M20 6L9 17l-5-5"></path>
+                    </svg>Unlimited custom creative feed</li>
+                  <li><svg viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none">
+                      <path d="M20 6L9 17l-5-5"></path>
+                    </svg>Dedicated WhatsApp group</li>
+                  <li><svg viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none">
+                      <path d="M20 6L9 17l-5-5"></path>
+                    </svg>Same-day updates</li>
+                  <li><svg viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none">
+                      <path d="M20 6L9 17l-5-5"></path>
+                    </svg>Competitor banner tracking</li>
+                </ul>
+                <a href="#contact" class="btn btn-secondary">Book Enterprise Ads</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Website Development Packages Group -->
+        <div class="pricing-section-group">
+          <div class="pricing-group-header">
+            <h3 class="pricing-group-title">Website Development Packages <span style="font-size: 0.85rem; font-weight: normal; color: var(--text-muted); display: block; margin-top: 4px;">(Same prices for Wordpress / Custom Code)</span></h3>
+            <div class="pricing-toggle-container">
+              <span class="toggle-label">🌐 USD</span>
+              <label class="toggle-switch">
+                <input type="checkbox" id="web-currency-toggle" aria-label="Toggle between USD and PKR pricing for web">
+                <span class="slider"></span>
+              </label>
+              <span class="toggle-label"><svg class="pk-flag" viewBox="0 0 640 480" xmlns="http://www.w3.org/2000/svg"><g fill-rule="evenodd" stroke-width="1pt" transform="translate(49) scale(.9375)"><path fill="#0c590b" d="M-95 0h768v512H-95z"/><path fill="#fff" d="M-95 0H97.5v512H-95z"/><g fill="#fff"><path d="m403.7 225.4-31.2-6.6-16.4 27.3-3.4-31.6-31-7.2 29-13-2.7-31.7 21.4 23.6 29.3-12.4-15.9 27.6 21 24z"/><path d="M415.4 306a121 121 0 0 1-161.3 59.4 122 122 0 0 1-59.5-162.1A119 119 0 0 1 266 139a156 156 0 0 0-11.8 10.9A112.3 112.3 0 0 0 415.5 306z"/></g></g></svg> PKR</span>
+            </div>
+          </div>
+
+          <!-- USD Web Cards -->
+          <div id="web-usd-pricing" class="pricing-panel active">
             <div class="pricing-grid-3">
               <div class="pricing-card">
                 <div class="tier-name">Web Starter</div>
                 <div class="tier-scope">Custom structural landing page</div>
-                <div class="price-range">$320 - $640</div>
+                <div class="price-range">$100 - $250</div>
                 <div class="price-period">per project</div>
                 <ul class="pricing-features">
                   <li><svg viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none">
@@ -323,7 +411,7 @@
                     </svg>Responsive layout (1 page)</li>
                   <li><svg viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none">
                       <path d="M20 6L9 17l-5-5"></path>
-                    </svg>Pure semantic HTML/CSS code</li>
+                    </svg>Pure semantic HTML/CSS code with modern libraries</li>
                   <li><svg viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none">
                       <path d="M20 6L9 17l-5-5"></path>
                     </svg>Optimized for Google Speed</li>
@@ -338,7 +426,7 @@
                 <div class="popular-badge">Best Value</div>
                 <div class="tier-name">Web Growth</div>
                 <div class="tier-scope">High performing corporate showcase</div>
-                <div class="price-range">$960 - $2,000</div>
+                <div class="price-range">$450 - $900</div>
                 <div class="price-period">per project</div>
                 <ul class="pricing-features">
                   <li><svg viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none">
@@ -360,7 +448,7 @@
               <div class="pricing-card">
                 <div class="tier-name">Web Enterprise</div>
                 <div class="tier-scope">Full bespoke stack portal</div>
-                <div class="price-range">$2,400 - $4,800</div>
+                <div class="price-range">$1,200 - $2,000</div>
                 <div class="price-period">per project</div>
                 <ul class="pricing-features">
                   <li><svg viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none">
@@ -380,91 +468,14 @@
               </div>
             </div>
           </div>
-        </div>
 
-        <!-- PKR Panels -->
-        <div id="pkr-pricing" class="pricing-panel">
-          <!-- PKR Ads -->
-          <div class="pricing-section-group">
-            <h3 class="pricing-group-title">Social Media & Ad Packages (PKR)</h3>
-            <div class="pricing-grid-3">
-              <div class="pricing-card">
-                <div class="tier-name">Ad Starter</div>
-                <div class="tier-scope">Single campaign launch</div>
-                <div class="price-range">35k - 55k PKR</div>
-                <div class="price-period">per project</div>
-                <ul class="pricing-features">
-                  <li><svg viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none">
-                      <path d="M20 6L9 17l-5-5"></path>
-                    </svg>3 bespoke static designs</li>
-                  <li><svg viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none">
-                      <path d="M20 6L9 17l-5-5"></path>
-                    </svg>1 revision round</li>
-                  <li><svg viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none">
-                      <path d="M20 6L9 17l-5-5"></path>
-                    </svg>48-hour delivery</li>
-                  <li><svg viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none">
-                      <path d="M20 6L9 17l-5-5"></path>
-                    </svg>Source Figma layout</li>
-                </ul>
-                <a href="#contact" class="btn btn-secondary">Book Starter Ads</a>
-              </div>
-
-              <div class="pricing-card popular">
-                <div class="popular-badge">Best Value</div>
-                <div class="tier-name">Ad Growth</div>
-                <div class="tier-scope">Complete brand feed</div>
-                <div class="price-range">70k - 120k PKR</div>
-                <div class="price-period">per project</div>
-                <ul class="pricing-features">
-                  <li><svg viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none">
-                      <path d="M20 6L9 17l-5-5"></path>
-                    </svg>8 high-performance designs</li>
-                  <li><svg viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none">
-                      <path d="M20 6L9 17l-5-5"></path>
-                    </svg>Infinite layout tweaks</li>
-                  <li><svg viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none">
-                      <path d="M20 6L9 17l-5-5"></path>
-                    </svg>Ready-to-post copies</li>
-                  <li><svg viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none">
-                      <path d="M20 6L9 17l-5-5"></path>
-                    </svg>A/B test variations</li>
-                </ul>
-                <a href="#contact" class="btn btn-primary">Book Growth Ads</a>
-              </div>
-
-              <div class="pricing-card">
-                <div class="tier-name">Ad Enterprise</div>
-                <div class="tier-scope">Full studio retainer</div>
-                <div class="price-range">150k - 250k PKR</div>
-                <div class="price-period">per month</div>
-                <ul class="pricing-features">
-                  <li><svg viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none">
-                      <path d="M20 6L9 17l-5-5"></path>
-                    </svg>Unlimited custom creative feed</li>
-                  <li><svg viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none">
-                      <path d="M20 6L9 17l-5-5"></path>
-                    </svg>Dedicated WhatsApp group</li>
-                  <li><svg viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none">
-                      <path d="M20 6L9 17l-5-5"></path>
-                    </svg>Same-day updates</li>
-                  <li><svg viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none">
-                      <path d="M20 6L9 17l-5-5"></path>
-                    </svg>Competitor banner tracking</li>
-                </ul>
-                <a href="#contact" class="btn btn-secondary">Book Enterprise Ads</a>
-              </div>
-            </div>
-          </div>
-
-          <!-- PKR Web (Apply 20% discount: 50k-90k becomes 40k-72k; 130k-270k becomes 104k-216k; 350k-700k becomes 280k-560k) -->
-          <div class="pricing-section-group">
-            <h3 class="pricing-group-title">Website Development Packages (PKR)</h3>
+          <!-- PKR Web Cards -->
+          <div id="web-pkr-pricing" class="pricing-panel">
             <div class="pricing-grid-3">
               <div class="pricing-card">
                 <div class="tier-name">Web Starter</div>
                 <div class="tier-scope">Custom landing page</div>
-                <div class="price-range">40k - 72k PKR</div>
+                <div class="price-range">10k - 20k PKR</div>
                 <div class="price-period">per project</div>
                 <ul class="pricing-features">
                   <li><svg viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none">
@@ -472,7 +483,7 @@
                     </svg>Responsive layout (1 page)</li>
                   <li><svg viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none">
                       <path d="M20 6L9 17l-5-5"></path>
-                    </svg>Pure semantic HTML/CSS code</li>
+                    </svg>Pure semantic HTML/CSS code with modern libraries</li>
                   <li><svg viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none">
                       <path d="M20 6L9 17l-5-5"></path>
                     </svg>Optimized for Google Speed</li>
@@ -487,7 +498,7 @@
                 <div class="popular-badge">Best Value</div>
                 <div class="tier-name">Web Growth</div>
                 <div class="tier-scope">High performing corporate showcase</div>
-                <div class="price-range">104k - 216k PKR</div>
+                <div class="price-range">50k - 70k PKR</div>
                 <div class="price-period">per project</div>
                 <ul class="pricing-features">
                   <li><svg viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none">
@@ -509,7 +520,7 @@
               <div class="pricing-card">
                 <div class="tier-name">Web Corporate</div>
                 <div class="tier-scope">Full bespoke stack portal</div>
-                <div class="price-range">280k - 560k PKR</div>
+                <div class="price-range">100k - 150k PKR</div>
                 <div class="price-period">per project</div>
                 <ul class="pricing-features">
                   <li><svg viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none">
