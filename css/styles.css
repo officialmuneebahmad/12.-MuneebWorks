@@ -42,11 +42,26 @@
   --shadow-card: 0 10px 30px rgba(31, 24, 16, 0.04);
   --shadow-hover: 0 20px 40px rgba(31, 24, 16, 0.08);
 
-  /* Transitions */
-  --transition-fast: 0.2s ease;
-  /* Transitions */
-  --transition-fast: 0.2s ease;
   --transition-normal: 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Base Resets & Responsiveness Standards */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: inline-block;
 }
 
 /* Dark Theme Variables Override */
@@ -1029,14 +1044,73 @@ input:checked+.slider:before {
   box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
 }
 
-.graph-dot {
-  transition: r var(--transition-fast), fill var(--transition-fast), stroke var(--transition-fast);
+/* Interactive Standards Curve Graph (Responsive & CSS-Only) */
+.graph-dot-wrapper {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  z-index: 5;
 }
 
-.graph-dot:hover {
-  r: 6.5px !important;
-  fill: var(--primary-accent) !important;
-  stroke: var(--white) !important;
+.graph-dot-element {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #1A1410;
+  border: 2.5px solid var(--primary-accent);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.graph-dot-wrapper:hover .graph-dot-element {
+  transform: scale(1.4);
+  background: var(--primary-accent) !important;
+  border-color: #FFFFFF !important;
+}
+
+.graph-tooltip-bubble {
+  position: absolute;
+  bottom: 18px;
+  left: 50%;
+  transform: translate(-50%, 5px);
+  background: #221A15;
+  border: 1px solid var(--primary-accent);
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  font-size: 0.75rem;
+  color: var(--white);
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.15s ease, transform 0.15s ease, visibility 0.15s ease;
+  white-space: nowrap;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.6);
+  z-index: 10;
+}
+
+.graph-dot-wrapper:hover .graph-tooltip-bubble {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, 0);
+}
+
+/* Default / Teaser Tooltip State */
+.graph-dot-wrapper.show-default-tooltip .graph-tooltip-bubble {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, 0);
+}
+
+/* Hide default tooltip when parent container is hovered, unless hovering the default dot itself */
+.graph-interactive-overlay:hover .graph-dot-wrapper.show-default-tooltip .graph-tooltip-bubble {
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(-50%, 5px);
+}
+
+.graph-interactive-overlay:hover .graph-dot-wrapper.show-default-tooltip:hover .graph-tooltip-bubble {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, 0);
 }
 
 .score-title {
@@ -1552,6 +1626,8 @@ body.dark-mode .browser-address {
   width: 100%;
   aspect-ratio: 16/10;
   overflow: hidden;
+  border-bottom-left-radius: calc(var(--radius-md) - 1px);
+  border-bottom-right-radius: calc(var(--radius-md) - 1px);
 }
 
 .browser-content img {
@@ -1559,6 +1635,8 @@ body.dark-mode .browser-address {
   height: 100%;
   object-fit: cover;
   object-position: top;
+  border-bottom-left-radius: calc(var(--radius-md) - 1px);
+  border-bottom-right-radius: calc(var(--radius-md) - 1px);
 }
 
 /* Phone Frame Mockup */
@@ -1610,6 +1688,7 @@ body.dark-mode .browser-address {
   height: 100%;
   overflow: hidden;
   position: relative;
+  border-radius: 26px;
 }
 
 .phone-content img {
@@ -1617,6 +1696,7 @@ body.dark-mode .browser-address {
   height: 100%;
   object-fit: cover;
   object-position: top;
+  border-radius: 26px;
 }
 
 /* Ad Creative Container */

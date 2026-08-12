@@ -25,8 +25,6 @@
   <link rel="icon" type="image/png" href="favicon.png">
   <!-- Google Material Icons -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <!-- Chart.js -->
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
@@ -697,15 +695,89 @@
             </div>
           </div>
 
-          <!-- Interactive Curve Line Graph (Chart.js) -->
+          <!-- Interactive Curve Line Graph -->
           <div class="standards-graph-container" style="margin-top: var(--space-md); border-top: 1px solid rgba(255,255,255,0.05); padding-top: var(--space-md); position: relative;">
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
               <span style="font-size: 0.85rem; font-weight: 600; color: var(--white); letter-spacing: 0.02em;">Speed Optimization Curve</span>
               <span style="font-size: 0.75rem; color: var(--text-muted);">Hover points to inspect</span>
             </div>
             
-            <div class="graph-wrapper" style="position: relative; height: 130px; width: 100%;">
-              <canvas id="standards-chart"></canvas>
+            <div class="graph-wrapper" style="position: relative; height: 120px; width: 100%; margin-bottom: 8px; overflow: visible;">
+              <!-- Background SVG Curve (Pure responsive vector) -->
+              <svg width="100%" height="100%" viewBox="0 0 300 100" preserveAspectRatio="none" style="overflow: visible; display: block; pointer-events: none;">
+                <defs>
+                  <linearGradient id="graph-area-gradient" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="var(--primary-accent)" stop-opacity="0.25"/>
+                    <stop offset="100%" stop-color="var(--primary-accent)" stop-opacity="0"/>
+                  </linearGradient>
+                </defs>
+                <!-- Grid Lines -->
+                <line x1="0" y1="20" x2="300" y2="20" stroke="rgba(255,255,255,0.05)" stroke-width="1" stroke-dasharray="3,3"/>
+                <line x1="0" y1="50" x2="300" y2="50" stroke="rgba(255,255,255,0.05)" stroke-width="1" stroke-dasharray="3,3"/>
+                <line x1="0" y1="80" x2="300" y2="80" stroke="rgba(255,255,255,0.05)" stroke-width="1" stroke-dasharray="3,3"/>
+                <!-- Filled Area -->
+                <path d="M 10 90 Q 75 75 125 50 T 225 25 T 290 10 L 290 100 L 10 100 Z" fill="url(#graph-area-gradient)"/>
+                <!-- Curve -->
+                <path d="M 10 90 Q 75 75 125 50 T 225 25 T 290 10" fill="none" stroke="var(--primary-accent)" stroke-width="2.5" stroke-linecap="round"/>
+              </svg>
+
+              <!-- Interactive HTML overlay (100% responsive, CSS-only hover states) -->
+              <div class="graph-interactive-overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: auto;">
+                
+                <!-- Dot 1: Initial Audit -->
+                <div class="graph-dot-wrapper" style="left: 3.3%; top: 90%;">
+                  <div class="graph-dot-element"></div>
+                  <div class="graph-tooltip-bubble">
+                    <div style="font-weight: 700; color: var(--primary-accent);">Initial Audit</div>
+                    <div style="font-size: 0.7rem; color: #B3A79B; margin-top: 2px;">5.4s Load Time</div>
+                  </div>
+                </div>
+
+                <!-- Dot 2: Code Minification -->
+                <div class="graph-dot-wrapper" style="left: 27.5%; top: 71%;">
+                  <div class="graph-dot-element"></div>
+                  <div class="graph-tooltip-bubble">
+                    <div style="font-weight: 700; color: var(--primary-accent);">Code Minification</div>
+                    <div style="font-size: 0.7rem; color: #B3A79B; margin-top: 2px;">3.2s Load Time</div>
+                  </div>
+                </div>
+
+                <!-- Dot 3: Image Compression -->
+                <div class="graph-dot-wrapper" style="left: 51.6%; top: 46%;">
+                  <div class="graph-dot-element"></div>
+                  <div class="graph-tooltip-bubble">
+                    <div style="font-weight: 700; color: var(--primary-accent);">Image Compression</div>
+                    <div style="font-size: 0.7rem; color: #B3A79B; margin-top: 2px;">1.8s Load Time</div>
+                  </div>
+                </div>
+
+                <!-- Dot 4: CDN & Caching -->
+                <div class="graph-dot-wrapper" style="left: 75.8%; top: 24%;">
+                  <div class="graph-dot-element"></div>
+                  <div class="graph-tooltip-bubble">
+                    <div style="font-weight: 700; color: var(--primary-accent);">CDN & Caching</div>
+                    <div style="font-size: 0.7rem; color: #B3A79B; margin-top: 2px;">1.1s Load Time</div>
+                  </div>
+                </div>
+
+                <!-- Dot 5: MW Standard -->
+                <div class="graph-dot-wrapper show-default-tooltip" style="left: 96.6%; top: 10%;">
+                  <div class="graph-dot-element" style="background: var(--primary-accent); border-color: #FFFFFF;"></div>
+                  <div class="graph-tooltip-bubble">
+                    <div style="font-weight: 700; color: var(--primary-accent);">Muneeb Works Standard</div>
+                    <div style="font-size: 0.7rem; color: #B3A79B; margin-top: 2px;">0.6s Load Time</div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            
+            <!-- X-Axis Labels -->
+            <div style="display: flex; justify-content: space-between; margin-top: 8px; font-size: 0.65rem; color: var(--text-muted); font-weight: 600;">
+              <span>Start</span>
+              <span>Asset Sweep</span>
+              <span>CDN Delivery</span>
+              <span>MW Speed Standard</span>
             </div>
           </div>
         </div>
